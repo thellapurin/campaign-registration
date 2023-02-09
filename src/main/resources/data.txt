@@ -1,0 +1,44 @@
+
+
+CREATE TABLE campaign_registration
+(
+    campaignid integer NOT NULL DEFAULT nextval('campaign_registration_campaignid_seq'::regclass),
+    message jsonb,
+    campaign_approval boolean,
+    campaign_classfification integer,
+    campaign_name character varying(255) COLLATE pg_catalog."default",
+    campaignkind integer,
+    compensation integer,
+    delivery_package_kind integer,
+    description character varying(255) COLLATE pg_catalog."default",
+    end_date date,
+    evaluation_campaign_name character varying(255) COLLATE pg_catalog."default",
+    evaluation_campaignid integer,
+    execution_date character varying(255) COLLATE pg_catalog."default",
+    filtering_conditions_type integer,
+    mechanical_required boolean,
+    nickname character varying(255) COLLATE pg_catalog."default",
+    notification_number character varying(255) COLLATE pg_catalog."default",
+    rxswin character varying(255) COLLATE pg_catalog."default",
+    rxswin_update_info_name character varying(255) COLLATE pg_catalog."default",
+    rxswin_updateinfold integer,
+    rxswin_updateinfos jsonb,
+    update_approval boolean,
+    update_usernotificationinfo_name character varying(255) COLLATE pg_catalog."default",
+    updated_usernotificationinfold integer,
+    CONSTRAINT campaign_registration_pkey PRIMARY KEY (campaignid)
+);
+
+
+
+
+
+INSERT INTO campaign_registration(
+	campaignid, message, campaign_approval, campaign_classfification, campaign_name, campaignkind, compensation, delivery_package_kind, description, end_date, evaluation_campaign_name, evaluation_campaignid, execution_date, filtering_conditions_type, mechanical_required, nickname, notification_number, rxswin, rxswin_update_info_name, rxswin_updateinfold, rxswin_updateinfos, update_approval, update_usernotificationinfo_name, updated_usernotificationinfold)
+	VALUES (1 {"cn": "Chinese sentence", "en": "message in english.", "ja": "Japanese message"} true 2	"OTA Registration" 4	2345  123  "campaign resgistration started"	"2023-01-18"	"Pre approval "	34	"3-02-2023"	5	true	"Campdetails"	"45"	"needed"	"post approval"	23	[{"login": [{"fyear": "2018-19", "password": "123456", "username": "123456", "store_authority": "Yes"}], "success": 1}]	true	"verification"	6);
+
+
+
+INSERT INTO campaign_registration(
+	campaignid, message, campaign_approval, campaign_classfification, campaign_name, campaignkind, compensation, delivery_package_kind, description, end_date, evaluation_campaign_name, evaluation_campaignid, execution_date, filtering_conditions_type, mechanical_required, nickname, notification_number, rxswin, rxswin_update_info_name, rxswin_updateinfold, rxswin_updateinfos, update_approval, update_usernotificationinfo_name, updated_usernotificationinfold)
+	VALUES (2 {"cn": "Chinese sentence", "en": "message in english.", "ja": "Japanese message"} true 3	"CAMP Registration" 5	235  13  "campaign resgistration started"	"2023-01-19"	"Pre approval "	34	"13-02-2023"	5	true	"Campdetails"	"45"	"needed"	"post approval"	23	[{"login": [{"fyear": "2018-19", "password": "123456", "username": "123456", "store_authority": "Yes"}], "success": 1}]	true	"verification"	9);
